@@ -5,31 +5,27 @@ export default function Menu() {
   return (
     <nav className="menu">
       <NavLink
-        exact
         to="/"
-        className="menu__item"
-        activeClassName="menu__item-active"
+        className={({isActive}) => (isActive ? "menu__item menu__item-active" : 'menu__item')}
+        
       >
         Главная
       </NavLink>
       <NavLink
         to="/drift"
-        className="menu__item"
-        activeClassName="menu__item-active"
+        className={({isActive}) => (isActive ? "menu__item menu__item-active" : 'menu__item')}
       >
         Дрифт-такси
       </NavLink>
       <NavLink
         to="/timeattack"
-        className="menu__item"
-        activeClassName="menu__item-active"
+        className={({isActive}) => (isActive ? "menu__item menu__item-active" : 'menu__item')}
       >
         Time Attack
       </NavLink>
       <NavLink
         to="/forza"
-        className="menu__item"
-        activeClassName="menu__item-active"
+        className={({isActive}) => (isActive ? "menu__item menu__item-active" : 'menu__item')}
       >
         Forza Karting
       </NavLink>
